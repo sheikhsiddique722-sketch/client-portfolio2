@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Areeba Sheikh — Frontend Developer & Office Automation Expert</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400&family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.0.42/lenis.min.js"></script>
+<script defer src="script.js"></script>
+</head>
+<body>
+<div class="bg-fx">
+  <div class="grid-bg"></div>
+  <div class="orb orb1" data-px="2"></div>
+  <div class="orb orb2" data-px="-3"></div>
+  <div class="orb orb3" data-px="2.5"></div>
+</div>
+<canvas id="particles"></canvas>
+
+<nav id="nav">
+  <div class="nav-inner wrap">
+    <a href="#hero" class="logo">Areeba<span>.</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeBtn" aria-label="Toggle theme"></button>
+      <button class="hamburger" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <div class="badge-avail reveal"><span class="dot"></span> Available for Freelance Work</div>
+      <h1 class="hero-h1 reveal">Hi, I'm <span class="grad">Areeba Sheikh</span></h1>
+      <div class="hero-role mono reveal"><span id="typed"></span><span class="cursor"></span></div>
+      <p class="hero-desc reveal">Building responsive websites &amp; professional documents — turning ideas into polished digital experiences.</p>
+      <div class="btn-row reveal">
+        <a href="#projects" class="btn btn-primary">View My Work →</a>
+        <a href="#contact" class="btn btn-ghost">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="photo-card" id="photoCard">
+        <img src="https://areeba591.github.io/Porfolio/my%20picture.jpeg" alt="Areeba Sheikh">
+      </div>
+      <div class="float-badge fb1"><span class="fb-ic">&lt;/&gt;</span> Web Development</div>
+      <div class="float-badge fb2"><span class="fb-ic">XL</span> Office Automation</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="eyebrow reveal">About Me</div>
+    <h2 class="sec-title reveal">The Person Behind the Code</h2>
+    <div class="about-grid" style="margin-top:40px">
+      <div class="stats">
+        <div class="stat reveal"><div class="stat-num" data-count="5">0</div><div class="stat-lbl">Projects Completed</div></div>
+        <div class="stat reveal"><div class="stat-num" data-count="7">0</div><div class="stat-lbl">Skills Mastered</div></div>
+        <div class="stat reveal"><div class="stat-num" data-count="2">0</div><div class="stat-lbl">Years Learning</div></div>
+        <div class="stat reveal"><div class="stat-num" data-count="100" data-suffix="%">0</div><div class="stat-lbl">Passion</div></div>
+      </div>
+      <div class="glass-card reveal">
+        <div class="eyebrow" style="margin-bottom:8px">My Story</div>
+        <h3 class="about-sub">Passionate Developer &amp; Automation Specialist</h3>
+        <p>I'm <strong>Areeba Sheikh</strong>, a dedicated Frontend Developer and Office Automation Expert with a strong passion for creating clean, responsive web interfaces and efficient professional documents. I specialise in building user-friendly websites using HTML5, CSS3, JavaScript, and Bootstrap 5, and I bring the same level of precision to productivity tools like MS Word, Excel, and PowerPoint.</p>
+        <p>Whether it's crafting a pixel-perfect landing page, designing an interactive quiz, building an Excel dashboard with dynamic charts, or structuring a compelling company profile in PowerPoint — I bring creativity, technical skill, and attention to detail to everything I build.</p>
+        <div class="chips">
+          <span class="chip">📍 Pakistan</span>
+          <span class="chip">💻 Frontend Developer</span>
+          <span class="chip">📊 Office Expert</span>
+          <span class="chip">🗣️ English / Urdu</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="eyebrow reveal">My Toolkit</div>
+    <h2 class="sec-title reveal">Skills &amp; Technologies</h2>
+    <div class="skill-group-title reveal">Web Development</div>
+    <div class="skills-grid" id="webSkills"></div>
+    <div class="skill-group-title reveal">Office Tools</div>
+    <div class="skills-grid" id="officeSkills"></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="eyebrow reveal">Portfolio</div>
+    <h2 class="sec-title reveal">Featured Projects</h2>
+    <div class="proj-grid" id="projGrid" style="margin-top:40px"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="eyebrow reveal">Get In Touch</div>
+    <h2 class="sec-title reveal">Let's Work Together</h2>
+    <div class="contact-grid" style="margin-top:40px">
+      <div class="contact-info glass-card reveal">
+        <h3>Say Hello 👋</h3>
+        <p>I'm always open to new projects, collaborations, or just a friendly chat about tech.</p>
+        <a href="mailto:areeba@email.com" class="contact-line"><span class="ci">✉️</span> areeba@email.com</a>
+        <a href="https://linkedin.com" target="_blank" class="contact-line"><span class="ci">in</span> linkedin.com/in/areeba</a>
+        <a href="https://github.com" target="_blank" class="contact-line"><span class="ci">⌥</span> github.com/areeba</a>
+        <div class="socials">
+          <a href="#" class="social-card">𝕏</a>
+          <a href="#" class="social-card">in</a>
+          <a href="#" class="social-card">⌥</a>
+        </div>
+      </div>
+      <div class="glass-card reveal">
+        <h3 class="about-sub" style="margin-top:0">Send a Message</h3>
+        <div class="field"><input type="text" id="cn" placeholder=" "><label for="cn">Your Name</label></div>
+        <div class="field"><input type="email" id="ce" placeholder=" "><label for="ce">Email Address</label></div>
+        <div class="field"><input type="text" id="cs" placeholder=" "><label for="cs">Subject</label></div>
+        <div class="field"><textarea id="cm" placeholder=" "></textarea><label for="cm">Message</label></div>
+        <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="alert('Thanks! This is a demo form.')">Send Message →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Copyright © 2026 <a href="#hero">Areeba Sheikh</a> — Built with ♥ using modern web tech
+</footer>
+
+</body>
+</html>
