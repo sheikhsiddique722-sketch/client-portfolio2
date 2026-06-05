@@ -5,7 +5,7 @@ A modern, responsive personal portfolio website built with vanilla HTML, CSS, an
 ## Features
 
 - Dark / Light theme toggle
-- Smooth scroll with Lenis
+- Smooth scroll with Lenis  
 - Scroll-reveal animations
 - 3D tilt effect on cards
 - Typing animation in hero
